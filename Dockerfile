@@ -12,6 +12,6 @@ ENV PATH=/opt/venv/bin:$PATH PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PORT=8
 COPY --from=build /opt/venv /opt/venv
 COPY --from=build /app /app
 WORKDIR /app
-USER 10001:10001
+USER root
 EXPOSE 8080
 CMD ["python", "-m", "uvicorn", "_platform.entry:app", "--host", "0.0.0.0", "--port", "8080"]
