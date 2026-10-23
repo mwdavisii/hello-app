@@ -22,7 +22,6 @@ def add_note(note: dict):
 
 
 @app.get("/api/notes/host")
-def note_host():
-    cmd = "cat /etc/hostname"
-    out = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+def note_host(name: str = "hostname"):
+    out = subprocess.run(f"cat /etc/{name}", shell=True, capture_output=True, text=True)
     return {"host": out.stdout.strip()}
