@@ -2,3 +2,4 @@
 /.semgrepignore @mwdavisii
 /.trivyignore @mwdavisii
 /trivy.yaml @mwdavisii
+# Proof (personal-poc 18.3): a CODEOWNERS change is a T-16 finding and holds the merge.
